@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  button#getAllBooks(onClick='getAllBooks()') Get All Books
+
+
+  script(type='text/javascript').
+     function getAllBooks(){
+       $(location).attr('href','/books');
+     };
